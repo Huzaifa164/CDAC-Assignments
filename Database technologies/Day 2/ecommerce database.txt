@@ -1,0 +1,46 @@
+create table customer(
+
+email_address varchar(75) primary key,
+first_name varchar(50),
+last_name varchar(50),
+address1 varchar(50),
+address2 varchar(50),
+customer_zip varchar(10),
+area_code char(3),
+telephone_number char(7));
+
+insert into customer values
+('huzaifa@gmail.com', 'Huzaifa', 'Ahmed', 'Hains Road', 'Kurla', '214141', '111', '3324345'),
+('fahad@gmail.com', 'Fahad', 'Shaikh', 'Mumbai', 'Pune', '43545', '222', '676764'),
+('zaid@gmail.com', 'Zaid', 'Khan', 'Kurla', 'Thane', '45435', '333', '6565654');
+
+create table cardinfo(
+card_id int primary key,
+ccnum varchar(16),
+ccexp date,
+name_on_card varchar(100),
+email_address varchar(75));
+
+insert into cardinfo values
+(1, '13223', '2023-02-02', 'Huzaifa Ahmed', 'huzaifa@gmail.com'),
+(2, '314343', '2022-04-23', 'Fahad Shaikh', 'fahad@gmail.com'),
+(3, '355252', '2023-12-30', 'Zaid Khan', 'zaid@gmail.com');
+
+create table cardtype(
+card_id int primary key,
+card_type varchar(20));
+
+insert into cardtype values
+(1, "visa"),
+(2, "HDFC"),
+(3, "Rupay");
+
+create table locale(
+zip varchar(10) primary key,
+city varchar(50),
+state char(2));
+
+insert into locale values
+('400011', 'Mumbai', 'M'),
+('400022', 'Surat', 'G'),
+('400033', 'Pune', 'M');
